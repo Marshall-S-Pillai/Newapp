@@ -9,6 +9,6 @@ echo_goodbye:
        exit 1
 
     -name: Say goodbye
-     run :
+      run:
        echo "Goodbye!"
        exit 0
