@@ -2,6 +2,7 @@ name: Second Workflow
 on:
   pull_request:
     branches :
+       - main
 jobs:
   echo_hello_world:
     runs-on: ubuntu-latest
