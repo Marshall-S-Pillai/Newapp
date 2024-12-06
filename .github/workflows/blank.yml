@@ -8,7 +8,7 @@ echo_goodbye:
        echo "script."
        exit 1
 
-    -name: Say goodbye
+    - name: Say goodbye
       run:
        echo "Goodbye!"
        exit 0
