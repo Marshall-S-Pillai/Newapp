@@ -1,24 +1,13 @@
-name: First Workflow
+name: Runner Workflow
+
 on:
- push:
+ push
+
 jobs:
-echo_hello_world:
-  runs-on: ubuntu-latest
-  steps:
-  - name: print hello world
-    run: echo "Hello World"
-
-echo_goodbye:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Failed step
-      run: 
-       echo "I will fail "
-       echo "I will fail"
-       echo "I will fail"
-       exit 0
-
-    - name: Say goodbye
-      run:
-       echo "Goodbye!"
-       exit 0
+  linux:
+     runs-on: ubuntu-latest
+     steps:
+     - name: linux
+       run: |
+         echo " This job is running on a ubuntu runner"
+         echo " Runner OS is $RUNNER_OS"
