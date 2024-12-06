@@ -1,8 +1,10 @@
 name: Second Workflow
 on:
-  pull_request:
-    branches :
-       - main
+  schedule:
+
+       - cron:
+            '2 * * * *'
+  
 jobs:
   echo_hello_world:
     runs-on: ubuntu-latest
