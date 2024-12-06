@@ -2,7 +2,7 @@ echo_goodbye:
   runs-on: ubuntu-latest
   steps:
     - name: Failed step
-      run: |
+      run: 
        echo "I will fail "
        echo "I will fail"
        echo "I will fail"
