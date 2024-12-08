@@ -1,31 +1,14 @@
-name: Runner Workflow
+name: On push with branch pattern Workflow
 
-on:
-  push:
-
+on: 
+ push:
+  branches:
+    - main
 jobs:
-  linux:
-    runs-on: ubuntu-latest
-    steps:
-      - name: linux
-        run: |
-          echo " This job is running on a ubuntu runner"
-          echo " Runner OS is $RUNNER_OS"
-          
-  windows:
-    runs-on: windows-latest
-    steps:
-      - name: windows
-        shell: bash
-        run: |
-          echo " This job is running on a windows runner"
-          echo " Runner OS is $RUNNER_OS"
-
-  mac:
-    runs-on: macos-latest
-    steps:
-      - name: mac
-        shell: bash
-        run: |
-          echo " This job is running on a mac runner"
-          echo " Runner OS is $RUNNER_OS"
+ linux:
+   runs-on: ubuntu-latest
+   steps:
+   - name: linux
+     run: 
+      echo "This job is running on a ubuntu runner"
+      echo "Runner OS is $RUNNER_OS"
