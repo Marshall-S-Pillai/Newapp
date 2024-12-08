@@ -1,14 +1,14 @@
-name: On push with branch pattern Workflow
+name: pull request with specific type Workflow
 
 on: 
- push:
-  branches:
-    - main
+ pull_request:
+  types:
+    - opened
+  # reopened again  
 jobs:
- linux:
+ echo_hello_world:
    runs-on: ubuntu-latest
    steps:
-   - name: linux
-     run: 
-      echo "This job is running on a ubuntu runner"
-      echo "Runner OS is $RUNNER_OS"
+   - name: print hello world
+     run: echo "Hello World"
+    
