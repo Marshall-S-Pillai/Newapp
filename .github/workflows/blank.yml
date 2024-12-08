@@ -1,2 +1,16 @@
+name: Pull request with specific type Workflow
+
+on: 
+  pull_request:
+    types:
+      - opened
+      # reopened again
+
+jobs:
+  echo_hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print hello world
+        run: echo "Hello World"
    
     
