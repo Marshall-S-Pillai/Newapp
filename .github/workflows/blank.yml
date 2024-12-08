@@ -4,7 +4,7 @@ on:
   pull_request:
     types:
       - opened
-      # reopened again
+      # reopened again 
 
 jobs:
   echo_hello_world:
