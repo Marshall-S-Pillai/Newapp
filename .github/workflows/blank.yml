@@ -9,7 +9,7 @@ jobs:
   linux:
     runs-on: ubuntu-latest
     steps:      
-      - name: linux
+      - name: linux   
         run: |
           echo "This job is running on an ubuntu runner"
           echo "Runner OS is $RUNNER_OS"
